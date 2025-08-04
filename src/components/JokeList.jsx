@@ -1,4 +1,6 @@
 import { useGetJokesQuery } from '../feature/apiSlice.js'
+import Spinner from 'react-bootstrap/Spinner';
+
 
 const JokeList = () => {
 
@@ -6,7 +8,11 @@ const JokeList = () => {
 
 
     if (isLoading) {
-        return <h3 style={{ margin: "10% auto", width: "max-content" }}>Loading...</h3>
+        return <div style={{ margin: "10% auto", width: "max-content" }}>
+            <Spinner style={{ color: "white" }} animation="border" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </Spinner>
+        </div>
     }
 
     if (isError || data?.error) {

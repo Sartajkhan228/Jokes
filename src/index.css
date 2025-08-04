@@ -1,0 +1,30 @@
+body {
+    color: white;
+    background-color: black;
+}
+
+.container {
+    border: 2px solid rgba(47, 47, 46, 0.908);
+    width: 500px;
+    text-align: center;
+    padding: 0 20px;
+    margin: 10% auto;
+    border-radius: 10px;
+
+}
+
+.para-tag {
+    font-size: larger;
+
+}
+
+
+@media (max-width: 640px) {
+
+    .container {
+        padding: 10px;
+        font-size: 14px;
+        width: 100%;
+        border: none
+    }
+}
